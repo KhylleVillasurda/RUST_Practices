@@ -9,8 +9,26 @@ enum Flavour {
     Vanilla,
     Strawberry,
 }
+//Method 1
+fn display_drink() {
+    //you can display  a drink with struct and enums into a function
+    let d = Drink {
+        name: String::from("Tequila Sunrise"),
+        flavour: Flavour::Vanilla,
+        ounces: 12,
+    };
+
+    println!("Drink Name: {}", d.name);
+    match d.flavour {
+        Flavour::Chocolate => println!("Chocolate Flavour"),
+        Flavour::Vanilla => println!("Vanilla"),
+        Flavour::Strawberry => println!("Strawberry Flavour"),
+    }
+    println!("Ounces: {}\n", d.ounces);
+}
 
 fn main() {
+    //Method 2, you can just directly define the values here with your struct
     let my_drink = Drink {
         name: String::from("Chocolate Milkshake"),
         flavour: Flavour::Chocolate,
@@ -22,7 +40,8 @@ fn main() {
         Flavour::Vanilla => println!("Vanilla"),
         Flavour::Strawberry => println!("Strawberry Flavour"),
     }
-    println!("Ounces: {}", my_drink.ounces);
+    println!("Ounces: {}\n", my_drink.ounces);
+    display_drink();
 }
 
 /* Reference snippet for struct definition
