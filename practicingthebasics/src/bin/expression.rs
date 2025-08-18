@@ -1,9 +1,16 @@
-fn print_out()  {
-    let 
+fn print_message(c: bool) {
+    match c {
+        true => println!("its big"),
+        false => println!("its small"),
+    }
 }
 
 fn main() {
-    
+    let x = 150;
+    let verify = x > 100;
+    println!("{:?}", verify);
+
+    print_message(verify);
 }
 
 //Print "its big" if a variable is > 100 and Print "its small" if a variable is <= 100
