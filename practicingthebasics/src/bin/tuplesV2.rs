@@ -13,4 +13,8 @@ fn main() {
     } else {
         println!("Invalid Input")
     }
+    //test here
+    let num = 3;
+    let spare = num < 5;
+    println!("{}", spare);
 }
