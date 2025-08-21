@@ -11,6 +11,7 @@ fn main() {
     println!("{:?}", verify);
 
     print_message(verify);
+    print_message(verify);
 }
 
 //Print "its big" if a variable is > 100 and Print "its small" if a variable is <= 100
